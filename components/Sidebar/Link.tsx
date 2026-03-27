@@ -151,7 +151,7 @@ export const PreviewLink = (props: LinkProps) => {
   const extraNoteStyle = outline ? outlineNoteStyle : viewerNoteStyle
   console.log(previewNode)
   const getText = () => {
-    fetch(`http://localhost:35901/node/${id}`)
+    fetch(`http://${window.location.hostname}:35901/node/${id}`)
       .then((res) => {
         return res.text()
       })
